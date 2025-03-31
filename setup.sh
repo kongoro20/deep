@@ -12,10 +12,10 @@ sudo apt update
 sudo apt install -y firefox wmctrl xdotool zip curl jq xclip unzip git python3-dev python3-tk python3-pip gnome-screenshot python3.8-venv
 
 # Create Python virtual environment
-python3 -m venv myenv
+python3 -m venv /root/deep/myenv
 
 # Activate the virtual environment
-source myenv/bin/activate
+source /root/deep/myenv/bin/activate
 
 # Ensure .Xauthority file is created
 touch ~/.Xauthority
@@ -29,16 +29,17 @@ pip install requests
 # Output completion message
 echo "All packages installed and environment set up successfully."
 
-# Add supervisor configuration
+# Add Supervisor configuration
 echo "[program:start_script]
-command=/bin/bash -c \"cd /root/deepnote && bash start.sh\"
-directory=/root
+command=/bin/bash -c \"cd /root/deep && bash start.sh\"
+directory=/root/deep
 autostart=true
-autorestart=true
-startsecs=10
-stderr_logfile=/root/start_err.log
-stdout_logfile=/root/start_out.log
-environment=DISPLAY=:1" | sudo tee /etc/supervisor/conf.d/start.conf > /dev/null
+autorestart=false
+startsecs=15
+stderr_logfile=/root/replay_err.log
+stdout_logfile=/root/replay_out.log
+environment=DISPLAY=:1,XAUTHORITY=/root/.Xauthority" | sudo tee /etc/supervisor/conf.d/replay.conf > /dev/null
+
 
 # Check if supervisor configuration was added successfully
 if [ $? -eq 0 ]; then
