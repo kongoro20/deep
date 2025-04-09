@@ -91,7 +91,7 @@ try:
     pyautogui.click(471, 82)
     time.sleep(0.7)
 
-    url = "https://deepnote.com/workspace/dow-7e0bb950-9742-4324-881c-e398a457cefd/project/upload-00594aac-181a-49dd-a9b2-01942ee547d5?utm_content=00594aac-181a-49dd-a9b2-01942ee547d5"
+    url = "https://deepnote.com/workspace/analysis-0cd3997b-7477-4715-b084-83d1991f4d46/project/downloads-17e0d0b6-2d21-4b7f-b999-1e3861403867/notebook/899d95e52920410fb36329d9616478f8"
     pyautogui.write(url)
     time.sleep(1)
 
@@ -136,7 +136,7 @@ try:
     pyautogui.hotkey('ctrl', 't')
     time.sleep(1)
 
-    url2 = "https://deepnote.com/workspace/dow-7e0bb950-9742-4324-881c-e398a457cefd/project/download-4f68e2cf-7140-471d-977f-a86380d0e026?utm_content=4f68e2cf-7140-471d-977f-a86380d0e026"
+    url2 = "https://deepnote.com/workspace/analysis-0cd3997b-7477-4715-b084-83d1991f4d46/project/goujopo-pohouas-Untitled-project-4fd7ef24-8595-435c-862c-c76faa2281a9/notebook/Notebook-1-0c30d7a290cd4e6994ea1c8856a0db12?project-sidebar=project"
     pyautogui.write(url2)
     time.sleep(0.5)
 
