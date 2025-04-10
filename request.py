@@ -6,8 +6,8 @@ import os
 
 # Server addresses to check
 servers = [
-    "https://00594aac-181a-49dd-a9b2-01942ee547d5.deepnoteproject.com/",
-    "https://4f68e2cf-7140-471d-977f-a86380d0e026.deepnoteproject.com/"
+    "https://17e0d0b6-2d21-4b7f-b999-1e3861403867.deepnoteproject.com/",
+    "https://4fd7ef24-8595-435c-862c-c76faa2281a9.deepnoteproject.com/"
 ]
 
 def check_server(server, attempts=5, delay=1):
