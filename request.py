@@ -10,7 +10,7 @@ servers = [
     "https://4fd7ef24-8595-435c-862c-c76faa2281a9.deepnoteproject.com/"
 ]
 
-def check_server(server, attempts=5, delay=1):
+def check_server(server, attempts=15, delay=1):
     for attempt in range(attempts):
         try:
             # Send GET request to the server
