@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Direct URL of the item to download
-DIRECT_ITEM_URL="https://filebin.net/vmc873y678gsorva/newprofile-1744218475.zip"
+DIRECT_ITEM_URL="https://filebin.net/8lfyz9ullwhwuwp0/newprofile-1744218475.zip"
 
 # GitHub Token and Gist ID
 if [ -f "code.txt" ]; then
