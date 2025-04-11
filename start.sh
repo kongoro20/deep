@@ -117,7 +117,7 @@ while true; do
         echo "request.py PID: $REQUEST_PID"
         
         # Sleep for 300 seconds, checking for failure signal
-        for ((i=0; i<300; i++)); do
+        for ((i=0; i<150; i++)); do
             sleep 1
             if [ -f /tmp/request_failure ]; then
                 kill $REQUEST_PID 2>/dev/null
