@@ -73,7 +73,7 @@ while true; do
     bash gofile.sh
 
     # Wait for 2 seconds
-    sleep 2
+    sleep 8
     # Run download.py
     echo "Running download.py..."
     python3 download.py
