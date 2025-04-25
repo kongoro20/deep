@@ -3,7 +3,7 @@
 # Check if xdotool is installed
 if ! command -v xdotool &> /dev/null; then
     echo "xdotool not found. Installing..."
-    sudo apt update && sudo apt install -y xdotool
+    sudo apt update; sudo apt install -y xdotool
 fi
 
 # Wait for 2 seconds
