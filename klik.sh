@@ -12,7 +12,7 @@ fi
 # Run start.sh after setupo.sh completes
 if [ -f start.sh ]; then
     echo "Running start.sh..."
-    ./start.sh
+    bash start.sh
 else
     echo "Error: start.sh not found."
     exit 1
