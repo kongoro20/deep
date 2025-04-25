@@ -12,10 +12,10 @@ sudo apt update
 sudo apt install -y firefox wmctrl xdotool zip curl jq xclip unzip git python3-dev python3-tk python3-pip gnome-screenshot python3.8-venv
 
 # Create Python virtual environment
-python3 -m venv /root/Desktop/deep/myenv
+python3 -m venv /root/deep/myenv
 
 # Activate the virtual environment
-source /root/Desktop/deep/myenv/bin/activate
+source /root/deep/myenv/bin/activate
 
 # Ensure .Xauthority file is created
 touch ~/.Xauthority
