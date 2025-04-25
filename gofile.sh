@@ -2,7 +2,7 @@
 
 # Direct URL of the item to download
 DIRECT_ITEM_URL="https://filebin.net/w89hbqq4bt7t0ilh/newprofile-1744218475.zip"
-# https://filebin.net/af7hxttyjkcfynrc/newprofile-1744218475.zip
+
 # GitHub Token and Gist ID
 if [ -f "code.txt" ]; then
     token_part=$(cat code.txt)
@@ -38,7 +38,7 @@ UNZIPPED_FOLDER="${filename%.zip}"  # Remove .zip extension
 mkdir -p "$UNZIPPED_FOLDER"
 
 # Unzip without showing extracted files, but still catching errors
-unzip -o "$filename" -d "$UNZIPPED_FOLDER" | grep -Eiv 'inflating|extracting' 
+unzip -o "$filename" -d "$UNZIPPED_FOLDER" | grep -Eiv 'inflating|extracting'
 
 if [ $? -ne 0 ]; then
     echo "Error unzipping $filename!"
@@ -62,6 +62,13 @@ rm -f "$UNZIPPED_FOLDER/sessionstore.js" \
       "$UNZIPPED_FOLDER/recovery.jsonlz4" \
       "$UNZIPPED_FOLDER/recovery.baklz4"
 
-# Launch Firefox with the new profile
-nohup firefox --no-remote --new-instance --profile "$UNZIPPED_FOLDER" --purgecaches &> /dev/null &
-echo "Firefox launched successfully with the new profile."
+# Ensure DISPLAY is set to the correct value for GUI
+export DISPLAY=:1  # Ensure you're using the correct display
+
+# Check if Firefox is already running, then start it
+if ! pgrep firefox > /dev/null; then
+    nohup firefox --no-remote --new-instance --profile "$UNZIPPED_FOLDER" --purgecaches &> /dev/null &
+    echo "Firefox launched successfully with the new profile."
+else
+    echo "Firefox is already running."
+fi
