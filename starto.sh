@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Start Xvfb if it's not already running
+if ! pgrep -x "Xvfb" > /dev/null; then
+    echo "Starting Xvfb..."
+    Xvfb :1 -screen 0 1366x641x16 &
+    sleep 2
+fi
+
+# Activate the environment and set necessary variables
+sleep 1
+source /root/Desktop/deep/myenv/bin/activate  # Explicit path to myenv
+export DISPLAY=:1  # Ensures Firefox uses the correct display
+export XAUTHORITY=/root/.Xauthority  # Ensure X server access
+
+# Wait for Xvfb to initialize
 sleep 2
 
 # Cleanup function to close Firefox windows and terminate Python scripts from /root/deepnote
