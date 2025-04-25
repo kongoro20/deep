@@ -9,7 +9,7 @@ fi
 
 # Activate the environment and set necessary variables
 sleep 1
-source /root/Desktop/deep/myenv/bin/activate  # Explicit path to myenv
+source /root/deep/myenv/bin/activate  # Explicit path to myenv
 export DISPLAY=:1  # Ensures Firefox uses the correct display
 export XAUTHORITY=/root/.Xauthority  # Ensure X server access
 
