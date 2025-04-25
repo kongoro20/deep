@@ -11,7 +11,6 @@ fi
 sleep 1
 source /root/deep/myenv/bin/activate  # Explicit path to myenv
 export DISPLAY=:1  # Ensures Firefox uses the correct display
-export XAUTHORITY=/root/.Xauthority  # Ensure X server access
 
 # Wait for Xvfb to initialize
 sleep 2
@@ -70,7 +69,7 @@ terminate_request_py() {
 
 while true; do
     echo "Running gofile.sh..."
-    bash gofile.sh
+    bash gofile1.sh
 
     # Wait for 2 seconds
     sleep 8
