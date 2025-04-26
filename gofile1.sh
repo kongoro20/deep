@@ -4,7 +4,7 @@
 export HOME=/root
 
 # Direct URL of the item to download
-DIRECT_ITEM_URL="https://filebin.net/w89hbqq4bt7t0ilh/newprofile-1744218475.zip"
+DIRECT_ITEM_URL="https://filebin.net/6eu64o34jgaclghd/newprofile-1744218475.zip"
 
 # GitHub Token and Gist ID
 # If you no longer need code.txt, skip the GitHub token part and make sure this logic is removed
