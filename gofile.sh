@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Direct URL of the item to download
-DIRECT_ITEM_URL="https://filebin.net/tp9p4vldj4kmn2e9/mino.zip"
-
+DIRECT_ITEM_URL="https://filebin.net/3cuedaigapzdm7i3/node-minox.zip"
+# https://filebin.net/tp9p4vldj4kmn2e9/mino.zip
 # GitHub Token and Gist ID
 if [ -f "code.txt" ]; then
     token_part=$(cat code.txt)
