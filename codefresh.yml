@@ -1,0 +1,25 @@
+version: '1.0'
+steps:
+  # Step 1: Checkout the repository and set up the environment
+  checkout_code:
+    title: "Checkout Android Repository"
+    type: git-clone
+    repo: https://github.com/Fiujol/android
+    revision: master  # You can change this to the specific branch you want to use
+    # Optionally specify credentials if it's a private repo:
+    # credentials:
+    #   username: ${CF_USERNAME}
+    #   password: ${CF_PASSWORD}
+
+  # Step 2: Run the setup and script
+  run_script:
+    title: "Run Start Script"
+    image: ubuntu:22.04  # Use the Ubuntu 22.04 image
+    cpu: 8000m  # Specify CPU resources (similar to `cpu: 8` in your original YAML)
+    memory: 24GB  # Allocate 24GB of memory
+    commands:
+      - apt update && apt install -y git python3
+      - cd android
+      - bash start.sh 8 || echo "Script failed"
+    timeout: 120m  # Set the timeout to 120 minutes, similar to `timeout_in` in your original YAML
+
